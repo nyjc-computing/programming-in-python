@@ -25,6 +25,7 @@ The following topics are covered:
    - expressions and statements
    - constants
    - defining functions and parameters
+   - functions vs procedures
    - variable scoping
 3. **Selection** [X]
    - input
