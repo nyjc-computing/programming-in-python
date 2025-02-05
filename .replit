@@ -1,0 +1,11 @@
+run = "jupyter notebook"
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "jupyter notebook"]
+
+[[ports]]
+localPort = 8888
+externalPort = 80
+exposeLocalhost = true
