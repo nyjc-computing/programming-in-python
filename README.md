@@ -33,6 +33,7 @@ The following topics are covered:
    - logical operators
 4. **Recursion** [X]
    - features of successful recursion
+   - `random` functions for generating pseudorandom numbers
 5. **Iteration** [X]
    - Conditional iteration with `while`
    - Fixed iteration with `for`
@@ -42,6 +43,7 @@ The following topics are covered:
    - Sequences using `list`
    - Mappings using `dict`
    - `list` vs `tuple` vs `str`
+   - `random` functions for working with sequences
 7. **Debugging** [X]
    - trace tables and `print()` statements
    - the `pdb` debugger
@@ -67,5 +69,4 @@ The following topics are covered:
     - importing modules
     - `__name__`
     - aliasing
-13. **Randomisation** with `random` [ ]
-14. Handling **CSV** files with `csv` [ ]
+13. Handling **CSV** files with `csv` [ ]
