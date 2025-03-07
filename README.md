@@ -38,16 +38,16 @@ The following topics are covered:
    - Conditional iteration with `while`
    - Fixed iteration with `for`
    - slicing
-   - in-place vs out-of-place methods
-6. **Data structures** [X]
+6. **Data structures** and **mutability** [X]
    - Sequences using `list`
    - Mappings using `dict`
    - `list` vs `tuple` vs `str`
+   - mutable vs immutable objects
    - `random` functions for working with sequences
 7. **Debugging** [X]
    - trace tables and `print()` statements
    - the `pdb` debugger
-8. **Identity** and **mutability** [X]
+8. **Identity** [X]
    - Identity with the `id()` function
    - `==` vs `is`
 9. **File IO**: working with files and directories [X]
