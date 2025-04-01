@@ -57,7 +57,7 @@ The following topics are covered:
 
 ### Getting things done
 
-11. Handling **CSV** files with `csv` [ ]
+11. Handling **CSV** files with `csv` [X]
     - `reader` and `writer` for CSV without header
     - `DictReader` and `DictWriter` for CSV with header
 13. **Convenience features** [ ]
