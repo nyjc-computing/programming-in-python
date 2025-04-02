@@ -68,7 +68,7 @@ The following topics are covered:
     - `sorted()`
     - `reversed()`
     - in-place operators
-14. Abstraction with **modules** [ ]
+14. Abstraction with **modules** [X]
     - importing modules
     - `__name__`
     - aliasing
