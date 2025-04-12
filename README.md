@@ -76,3 +76,14 @@ The following topics are covered:
     - composable functions
     - composing and decomposing functions
     - using constants
+
+### Object-Oriented Programming
+
+01 Encapsulation
+- bundling data
+- bundling methods
+- separating interface and implementation
+- the public interface
+
+02 Inheritance
+- 
