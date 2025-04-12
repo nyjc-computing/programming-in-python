@@ -72,7 +72,7 @@ The following topics are covered:
     - importing modules
     - `__name__`
     - aliasing
-14. Lesson 14: Abstraction with Composition and Decomposition [X]
+14. Abstraction with Composition and Decomposition [X]
     - composable functions
     - composing and decomposing functions
     - using constants
