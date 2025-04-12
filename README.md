@@ -60,7 +60,7 @@ The following topics are covered:
 11. Handling **CSV** files with `csv` [X]
     - `reader` and `writer` for CSV without header
     - `DictReader` and `DictWriter` for CSV with header
-13. **Convenience features** [X]
+12. **Convenience features** [X]
     - f-strings
     - tuple unpacking
     - `enumerate()`
@@ -68,7 +68,7 @@ The following topics are covered:
     - `sorted()`
     - `reversed()`
     - in-place operators
-14. Abstraction with **modules** [X]
+13. Abstraction with **modules** [X]
     - importing modules
     - `__name__`
     - aliasing
