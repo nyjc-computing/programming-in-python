@@ -9,14 +9,14 @@ HORIZONTAL = "horizontal"
 VERTICAL = "vertical"
 
 
-def create_grid(n: int, char: str) -> list[list[str]]:
+def create_grid(n: int, char: str) -> "list[list[str]]":
     """Create a grid of size n x n filled with char, and return it."""
     grid = []
     for _ in range(n):
         grid.append([char] * n)
     return grid
 
-def is_unoccupied(board: list[list[str]], row: int, col: int, size: int, orientation: str) -> bool:
+def is_unoccupied(board: "list[list[str]]", row: int, col: int, size: int, orientation: str) -> bool:
     """Check if the specified area on the board is unoccupied.
 
     Return True if unoccupied, False otherwise.
@@ -31,7 +31,7 @@ def is_unoccupied(board: list[list[str]], row: int, col: int, size: int, orienta
                 return False
     return True
 
-def place_ship_horizontally(board: list[list[str]], ship_name: str, size: int, row: int, col: int) -> None:
+def place_ship_horizontally(board: "list[list[str]]", ship_name: str, size: int, row: int, col: int) -> None:
     """Place a ship horizontally on the board at the specified location.
 
     Return True if successful, False if not.
@@ -41,7 +41,7 @@ def place_ship_horizontally(board: list[list[str]], ship_name: str, size: int, r
     for i in range(size):
         board[row][col + i] = ship_name
 
-def place_ship_vertically(board: list[list[str]], ship_name: str, size: int, row: int, col: int) -> None:
+def place_ship_vertically(board: "list[list[str]]", ship_name: str, size: int, row: int, col: int) -> None:
     """Place a ship vertically on the board at the specified location.
 
     Return True if successful, False if not.
@@ -51,7 +51,7 @@ def place_ship_vertically(board: list[list[str]], ship_name: str, size: int, row
     for i in range(size):
         board[row + i][col] = ship_name
 
-def place_ship(board: list[list[str]], ship_name: str, size: int) -> None:
+def place_ship(board: "list[list[str]]", ship_name: str, size: int) -> None:
     """Place a ship of size size on the board at a random location."""
     orientation = random.choice([HORIZONTAL, VERTICAL])
     placed = False
@@ -67,7 +67,7 @@ def place_ship(board: list[list[str]], ship_name: str, size: int) -> None:
                 place_ship_vertically(board, ship_name, size, row, col)
                 placed = True
 
-def display_board(board: list[list[str]]) -> None:
+def display_board(board: "list[list[str]]") -> None:
     """Display the current state of the board."""
     # Column label row
     print("  " + " ".join(str(i) for i in range(GRID_SIZE)))
@@ -75,7 +75,7 @@ def display_board(board: list[list[str]]) -> None:
     for i, row in enumerate(board):
         print(f"{i} " + " ".join(row))
 
-def is_valid_guess(board: list[list[str]], text: str) -> bool:
+def is_valid_guess(board: "list[list[str]]", text: str) -> bool:
     """Check if the guess is valid. Return True if valid, False otherwise.
 
     A guess is expected in the form "row,col", where row and col are integers between 0 and GRID_SIZE - 1.
@@ -94,7 +94,7 @@ def is_valid_guess(board: list[list[str]], text: str) -> bool:
         return False
     return True
 
-def guess_to_coordinates(guess: str) -> tuple[int, int]:
+def guess_to_coordinates(guess: str) -> "tuple[int, int]":
     """Convert a guess string to coordinates.
 
     Return the row and column as a tuple of integers.
@@ -103,7 +103,7 @@ def guess_to_coordinates(guess: str) -> tuple[int, int]:
     x, y = int(first), int(second)
     return x, y
 
-def prompt_valid_guess(board: list[list[str]]) -> tuple[int, int]:
+def prompt_valid_guess(board: "list[list[str]]") -> "tuple[int, int]":
     """Prompt the user for a valid guess.
 
     If the guess is invalid, keep prompting until a valid guess is entered.
@@ -115,7 +115,7 @@ def prompt_valid_guess(board: list[list[str]]) -> tuple[int, int]:
         guess = input("Invalid guess. Enter your guess (row,col): ")
     return guess_to_coordinates(guess)
 
-def get_enemy_guess(board: list[list[str]]) -> tuple[int, int]:
+def get_enemy_guess(board: "list[list[str]]") -> "tuple[int, int]":
     """Generate a random guess for the enemy.
 
     Return the row and column of the guess, as a tuple.
@@ -127,18 +127,18 @@ def get_enemy_guess(board: list[list[str]]) -> tuple[int, int]:
         y = random.randint(0, GRID_SIZE - 1)
     return x, y
 
-def is_target_hit(board: list[list[str]], x: int, y: int) -> bool:
+def is_target_hit(board: "list[list[str]]", x: int, y: int) -> bool:
     """Check if the target hit a ship. Return True if it did, False otherwise."""
     return board[x][y] != EMPTY
 
-def targetting_update(board: list[list[str]], hit_what: str, x: int, y: int) -> None:
+def targetting_update(board: "list[list[str]]", hit_what: str, x: int, y: int) -> None:
     """Update the targetting board with the guess."""
     if hit_what == EMPTY:
         board[x][y] = MISS
     else:
         board[x][y] = HIT
 
-def player_update(board: list[list[str]], x: int, y: int) -> None:
+def player_update(board: "list[list[str]]", x: int, y: int) -> None:
     """Update the player board with the guess."""
     if board[x][y] == EMPTY:
         board[x][y] = MISS
@@ -157,7 +157,7 @@ def is_gameover(turns: int, player_hits: int, enemy_hits: int, total_ship_cells:
         return True
     return False
 
-def display_overlay(targetting: list[list[str]], playing: list[list[str]]) -> None:
+def display_overlay(targetting: "list[list[str]]", playing: "list[list[str]]") -> None:
     """Display the targetting overlaid on the ship board."""
     # Column label row
     print("  " + " ".join(str(i) for i in range(GRID_SIZE)))
@@ -173,7 +173,7 @@ def display_overlay(targetting: list[list[str]], playing: list[list[str]]) -> No
                 print(playing[i][j], end=" ")
         print()  # end the row
 
-def run_game(turns: int, ships: dict[str, int]) -> None:
+def run_game(turns: int, ships: "dict[str, int]") -> None:
     # Variables for tracking game state
     player_hits = 0
     enemy_hits = 0
