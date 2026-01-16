@@ -1,0 +1,9 @@
+ID,Product,Category,Price,Stock
+P001,Apple,Fruit,1.50,50
+P002,Banana,Fruit,0.80,30
+P003,Carrot,Vegetable,1.20,20
+P004,Bread,Bakery,3.50,15
+P005,Milk,Dairy,2.50,40
+P006,Cheese,Dairy,5.00,10
+P007,Chicken,Meat,8.00,25
+P008,Beef,Meat,12.00,18
