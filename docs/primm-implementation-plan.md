@@ -125,15 +125,14 @@
 #### Task 5.1: Add Trace Table After `factorial()` Example ✅
 - **Location:** `lesson_04.ipynb`, after factorial function
 - **Insertion Point:** After initial factorial example, before exercises
-- **Also needed:** Add bridge paragraph at start explaining recursion vs iteration
 - **Content:**
-  - Bridge: Explain recursion vs iteration (sets expectations)
-  - Real-world re-prompt example (3 calls trace)
+  - Real-world re-prompt example (4 calls trace)
   - Factorial trace (first 3 calls only)
   - Unwinding explanation
-  - Debug output example
+  - Debug output example with `factorial_debug()`
 - **Completed:** 2025-01-21
 - **Acceptance Criteria:** ✅ All met
+- **Note:** Bridge paragraph was considered but intentionally NOT added — students without programming background won't wonder "why recursion before iteration" until they encounter other tutorials later
 
 ---
 
@@ -239,7 +238,7 @@ After each phase, verify:
 | 4.1 | L3b introduction | ✅ Complete | Explains progression from L3a | 2025-01-21 |
 | 4.2 | L3b elif PRIMM | ❌ Removed | Content moved to L3a | 2025-01-21 |
 | 4.3 | L3b boolean PRIMM | ✅ Complete | Troubleshooting, non-evaluative checking covered | 2025-01-21 |
-| 5.1 | L4 recursion trace + bridge | ✅ Complete | Bridge, phone re-prompt trace, factorial trace (3 calls), debug output added | 2025-01-21 |
+| 5.1 | L4 recursion trace | ✅ Complete | Phone re-prompt trace, factorial trace (3 calls), debug output added (bridge intentionally omitted) | 2025-01-21 |
 | 6.1 | L8 identity PRIMM | ⏳ Pending | | |
 
 **Legend:** ⬜ Not Started | 🟡 In Progress | ✅ Complete | ❌ Blocked | ⏳ Pending
@@ -326,12 +325,12 @@ Programming in Python/
 ### 2025-01-21: Phase 5 (L4 Trace Tables) - ✅ Complete
 
 **Completed Tasks:**
-- Added bridge paragraph at start of lesson explaining why recursion is taught before iteration
 - Added "Understanding recursion with trace tables" section after factorial function
 - Phone re-prompt trace table showing 4 calls (3 errors + success)
 - Factorial trace table showing stacking (first 3 calls), base case, and unwinding
 - Debug example with `factorial_debug()` function that prints call stack with indentation
 - Trace section emphasizes "trust the function" approach and explains why full tracing doesn't work
+- Bridge paragraph intentionally NOT added — students won't question "why recursion before iteration" until later
 
 **Key Implementation Decisions:**
 1. **L3a scope:** Stopped at if-elif-else (not including logical operators)
