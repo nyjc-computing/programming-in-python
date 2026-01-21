@@ -7,7 +7,7 @@ This document collates style decisions for consistency across all lesson noteboo
 **Rule:** When referring to functions in text (markdown cells), always include parentheses after the function name.
 
 **Examples:**
-- ✅ Correct: `factorial()`, `len()`, `print()`
+- ✅ Correct: `factorial()`, `len()`, `print()`, `append()`, `dict.values()`
 - ❌ Incorrect: `factorial`, `len`, `print`
 
 **Rationale:** Parentheses make it immediately clear that we're referring to a function, not a variable or other identifier.
@@ -19,11 +19,20 @@ This document collates style decisions for consistency across all lesson noteboo
 - Code comments
 - Headers (where appropriate)
 
-**IMPORTANT - Do NOT use regex for this:**
-- Don't add `()` to function names used as verbs (e.g., "write a function" not "write() a function")
-- Don't add `()` when the function name is part of a larger word (e.g., "integer" not "int()eger")
-- Don't add `()` to common words that happen to match function names (e.g., "abstract" not "abs()tract")
-- This requires human judgment - apply manually when reviewing content
+**IMPORTANT - Only use `()` for actual function references:**
+
+The `()` suffix is ONLY for:
+- Built-in Python functions: `print()`, `len()`, `id()`, `type()`, `int()`, `float()`, `str()`, `bool()`, `list()`, `dict()`, `range()`, etc.
+- Methods that are actually called in code: `append()`, `.keys()`, `.values()`, `.items()`, `.split()`, `.startswith()`, etc.
+- User-defined functions that were taught earlier in the lesson
+
+Do NOT add `()` to:
+- Verbs: "add elements" not "add() elements", "update the dict" not "update() the dict"
+- Nouns that happen to contain function names: "structures" not "str()uctures", "integer" not "int()eger"
+- Common words: "abstract" not "abs()tract", "write code" not "write() code", "remove items" not "remove() items"
+- Adverbs/other parts of speech: "intended" not "int()ended", "inserted" not "insert()ed"
+
+**This requires human judgment** - do NOT use regex for this. Apply manually when reviewing content.
 
 **Note:** In code cells, actual function calls and definitions naturally include parentheses. This rule is primarily for prose.
 
