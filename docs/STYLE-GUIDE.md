@@ -22,15 +22,50 @@ This document collates style decisions for consistency across all lesson noteboo
 **IMPORTANT - Only use `()` for actual function references:**
 
 The `()` suffix is ONLY for:
-- Built-in Python functions: `print()`, `len()`, `id()`, `type()`, `int()`, `float()`, `str()`, `bool()`, `list()`, `dict()`, `range()`, etc.
+- Built-in Python functions: `print()`, `len()`, `id()`, `type()`, `range()`, `input()`, `abs()`, `max()`, `min()`, etc.
 - Methods that are actually called in code: `append()`, `.keys()`, `.values()`, `.items()`, `.split()`, `.startswith()`, etc.
 - User-defined functions that were taught earlier in the lesson
 
-Do NOT add `()` to:
-- Verbs: "add elements" not "add() elements", "update the dict" not "update() the dict"
-- Nouns that happen to contain function names: "structures" not "str()uctures", "integer" not "int()eger"
-- Common words: "abstract" not "abs()tract", "write code" not "write() code", "remove items" not "remove() items"
-- Adverbs/other parts of speech: "intended" not "int()ended", "inserted" not "insert()ed"
+---
+
+### Type Names vs. Conversion Functions
+
+**Rule:** Type names (`int`, `float`, `str`, `bool`, `list`, `dict`, `tuple`) do NOT get parentheses when used as nouns describing a type.
+
+| Context | Correct | Incorrect |
+|---------|---------|-----------|
+| Type as noun | `` `int` ``, `` `float` ``, `` `str` ``, `` `bool` `` | `` `int()` ``, `` `float()` ``, etc. |
+| Conversion function | `` `int()` ``, `` `float()` ``, `` `str()` `` | `` `int` ``, `` `float` `` (when referring to calling the function) |
+
+**Examples:**
+- ✅ "Convert to an `int`" / "This is a `str`" / "Returns a `bool`"
+- ✅ "Use the `int()` function" / "Call `str()` to convert"
+- ❌ "Convert to an `int()`" / "This is a `str()`" / "Returns a `bool()`"
+
+**Plural forms:**
+- ✅ "`int`s and `float`s" / "string methods" / "`dict` values"
+- ❌ "`int()`s" / "`str()`s" / "`float()` values"
+
+---
+
+### Verbs, Nouns, and Common Words
+
+**Rule:** Do NOT add `()` to words that happen to contain function names.
+
+| Correct | Incorrect |
+|---------|-----------|
+| "minus", "insert", "open" | "min()us", "insert()ed", "open()ing" |
+| "values", "keys", "items" | "values()", "keys()", "items()" (when used as nouns, not method calls) |
+| "interpreter", "structure" | "int()erpreter", "str()ucture" |
+| "print the values" | "print() the values" (when not referring to the function) |
+
+**Gerunds (-ing forms):**
+- ✅ "opening a file" / "reading data" / "printing values"
+- ❌ "open()ing a file" / "print()ing values"
+
+**Words containing function names:**
+- ✅ "lowercase", "structure", "integer", "abstract", "intended"
+- ❌ "lower()case", "str()ucture", "int()eger", "abs()tract", "int()ended"
 
 **This requires human judgment** - do NOT use regex for this. Apply manually when reviewing content.
 
@@ -102,4 +137,4 @@ When adding PRIMM scaffolding:
 
 ## Last Updated
 
-2025-01-21
+2025-01-22
