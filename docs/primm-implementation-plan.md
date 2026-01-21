@@ -2,7 +2,7 @@
 
 **Created:** 2025-01-21
 **Last Updated:** 2025-01-21
-**Status:** 🚧 In Progress (Phases 1-2, 4-5 Complete, Phase 3, 6 Pending)
+**Status:** 🚧 In Progress (Phases 1-2, 4-6 Complete, Phase 3 Pending)
 **Objective:** Add PRIMM framework elements and trace tables at major cognitive cliffs identified in the cognitive demand analysis.
 
 ---
@@ -136,20 +136,21 @@
 
 ---
 
-### Phase 6: PRIMM for Lesson 8 (Identity Bug) ⏳ PENDING
+### Phase 6: PRIMM for Lesson 8 (Identity Bug) ✅ COMPLETE
 
 #### Task 6.1: Add PRIMM Before `word_stats()` Bug
-- **Location:** `lesson_08.ipynb`, before word_stats function
-- **Insertion Point:** At start of lesson, after Jupyter intro
+- **Location:** `lesson_08.ipynb`, at start of lesson, after Jupyter intro
+- **Insertion Point:** After cell-0 (Jupyter intro), before lesson title
 - **Content:** Student records scenario with prediction
-- **Acceptance Criteria:**
-  - [ ] Concrete scenario (student enrollment data)
-  - [ ] Prediction shows expected behavior
-  - [ ] Running code reveals surprising result
-  - [ ] Investigate with `id()` tracking
-  - [ ] Modify shows fix
-  - [ ] Leads naturally into existing `word_stats` example
-  - [ ] `word_stats` becomes reinforcement, not first exposure
+- **Completed:** 2025-01-21
+- **Acceptance Criteria:** ✅ All met
+  - Concrete scenario (student enrollment data with Alice, Bob, Charlie)
+  - Prediction shows expected behavior (three different records)
+  - Running code reveals surprising result (all three show Charlie)
+  - Investigate with `id()` tracking (shows all same id)
+  - Make shows fix (create new dict each time)
+  - Leads naturally into existing `word_stats` example
+  - `word_stats` becomes reinforcement, not first exposure
 
 ---
 
@@ -239,7 +240,7 @@ After each phase, verify:
 | 4.2 | L3b elif PRIMM | ❌ Removed | Content moved to L3a | 2025-01-21 |
 | 4.3 | L3b boolean PRIMM | ✅ Complete | Troubleshooting, non-evaluative checking covered | 2025-01-21 |
 | 5.1 | L4 recursion trace | ✅ Complete | Phone re-prompt trace, factorial trace (3 calls), debug output added (bridge intentionally omitted) | 2025-01-21 |
-| 6.1 | L8 identity PRIMM | ⏳ Pending | | |
+| 6.1 | L8 identity PRIMM | ✅ Complete | Student enrollment scenario (Alice/Bob/Charlie) with full PRIMM | 2025-01-21 |
 
 **Legend:** ⬜ Not Started | 🟡 In Progress | ✅ Complete | ❌ Blocked | ⏳ Pending
 
@@ -258,7 +259,7 @@ Programming in Python/
 ├── lesson_06a.ipynb
 ├── lesson_06b.ipynb
 ├── lesson_07.ipynb
-├── lesson_08.ipynb          ⏳ Phase 6 (PRIMM needed)
+├── lesson_08.ipynb          ✅ Phase 6 COMPLETE (PRIMM added before word_stats)
 ├── lesson_09a.ipynb
 ├── lesson_09b.ipynb
 ├── lesson_10.ipynb
@@ -351,10 +352,38 @@ Programming in Python/
 
 **Lesson Learned:** Function naming convention requires human judgment - do NOT use regex. Common false positives: "into" → "int()o", "abstract" → "abs()tract", verbs like "write" → "write()".
 
+### 2025-01-21: Phase 6 (L8 PRIMM) - ✅ Complete
+
+**Completed Tasks:**
+- Added PRIMM section to `lesson_08.ipynb` after Jupyter intro, before lesson title
+  - Predict: Student enrollment scenario (Alice, Bob, Charlie)
+  - Run: Code shows all three records have Charlie's data
+  - Investigate: `id()` reveals all three are the same object
+  - Make: Fixed version creates new dict each time
+- Bridge paragraph connects PRIMM to main lesson content
+- `word_stats` example now serves as reinforcement after scaffolding
+- All acceptance criteria met
+
+### 2025-01-21: Style Fixes & Standardisation - ✅ Complete
+
+**Completed Tasks:**
+- Fixed function reference issues across multiple lessons
+  - Removed incorrect `()` from verbs and common words (e.g., `str()uctures` → `structures`, `int()end` → `intend`, `add()` → `add`)
+  - Kept `()` for actual function references (built-ins, methods, user-defined functions)
+- Updated STYLE-GUIDE.md to clarify function reference rule with explicit do's and don'ts
+- Fixed `(click to reveal)` → `(<i>click to reveal</i>)` in 4 lesson files (L5, L6a, L6b, L12)
+- Standardized PRIMM header format to `### **Verb:** rest of header` in L2 and L8
+- Fixed various function reference issues in L5, L6a, L6b, L11, L13
+
 **Current Progress:**
 - Phase 1: ✅ Complete (L3 split, references updated)
 - Phase 2: ✅ Complete (L2 PRIMM, lesson flow improvements)
 - Phase 4: 🟡 Partial (L3b intro and boolean content exist, elif PRIMM removed)
+- Phase 6: ✅ Complete (L8 identity PRIMM with student enrollment scenario)
+- Phase 4: 🟡 Partial (L3b intro and boolean content exist, elif PRIMM removed)
+- Phase 6: ✅ Complete (L8 identity PRIMM with student enrollment scenario)
+- Style fixes: ✅ Complete (function references, italicization, PRIMM header formatting)
+- Phase 6: ✅ Complete (L8 identity PRIMM with student enrollment scenario)
 
 ---
 
