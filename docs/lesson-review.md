@@ -27,9 +27,9 @@ The course follows a generally logical progression from basic expressions to mor
 - `print()` and `type()` functions
 
 **Premature Usage Issues:**
-- Functions concept used before Lesson 2 (mentions "functions" will be covered later)
-- `not` keyword used without explanation (logical operators not taught until Lesson 3b)
-- `.isdecimal()` method referenced but not explained (methods covered in Lesson 3a)
+- Functions concept used before Lesson 2 — mitigated by "crash course" section (acceptable)
+- `not` keyword used but now caveated with note about later coverage (acceptable)
+- ~~`.isdecimal()` method referenced~~ — not found in Lesson 1; report was incorrect
 
 **Scaffolding:** Good step-by-step operator exploration, try-it-yourself cells, summary with active recall
 
@@ -46,11 +46,13 @@ The course follows a generally logical progression from basic expressions to mor
 - Docstrings
 - `help()` function
 - `NameError` and `TypeError`
+- `len()` function (now with proper summary)
 
 **Scaffolding:**
 - **Excellent PRIMM sections** (Predict-Investigate-Make pattern)
 - Pythontutor visualization for scoping
 - Good foreshadowing of logical operators (Lesson 3b)
+- `len()` investigation followed by clear summary of behavior
 
 ---
 
@@ -64,9 +66,9 @@ The course follows a generally logical progression from basic expressions to mor
 - `elif` keyword
 
 **Premature Usage Issues:**
-- `len()` used without formal teaching (mentioned in L2 exercise but not fully covered)
-- Methods introduced as "Crash course" without prior foundation
-- `return` used before students fully understand functions
+- ~~`len()` used without formal teaching~~ — now properly summarized in Lesson 2
+- Methods introduced as "Crash course" — unavoidable given extensive string method usage; could be better scaffolded with PRIMM (Predict phase before showing usage)
+- ~~`return` used before students fully understand~~ — `return` was covered in Lesson 2 (cell 17)
 
 **Scaffolding:** Progressive validation example, phone number context, negative validation algorithmic pattern
 
@@ -77,15 +79,15 @@ The course follows a generally logical progression from basic expressions to mor
 **Main Topics:**
 - Logical operators: `and`, `or`, `not`
 - Non-evaluative checking (short-circuit evaluation)
-- String indexing
+- String indexing (positive and negative)
 - Boolean logic with non-boolean types
 
 **Premature Usage Issues:**
-- String indexing introduced as "Crash course" without formal teaching
-- `IndexError` referenced but not formally explained (Lesson 5)
-- Negative indexing introduced without prior foundation
+- String indexing introduced as "Crash course" — could be scaffolded with PRIMM (Predict-Run-Investigate pattern)
+- `IndexError` referenced contextually (to show why `.startswith()` is safer than indexing) — formal treatment with exercise in Lesson 5 is appropriate
+- Negative indexing introduced with appropriate warning ("their use is generally discouraged")
 
-**Scaffolding:** Builds on Lesson 3a's `validate()` function, progressive logical operator explanation, truth tables
+**Scaffolding:** Builds on Lesson 3a's `validate()` function, progressive logical operator explanation, truth tables, good comparison of methods vs indexing for error handling
 
 ---
 
@@ -337,10 +339,10 @@ The course follows a generally logical progression from basic expressions to mor
 
 | Lesson | Premature Usage | Missing Scaffolding | Inconsistencies | Summary Present |
 |--------|-----------------|---------------------|-----------------|-----------------|
-| 1 | `not` keyword, methods reference | None | None | Yes |
-| 2 | References to later topics | None | None | Yes |
-| 3a | `len()`, methods | None | None | Yes |
-| 3b | String indexing, `IndexError` | Negative indexing | None | Yes |
+| 1 | `not` keyword (caveated), functions (crash course) | None | Report error: `.isdecimal()` not in L1 | Yes |
+| 2 | None | `len()` now has summary | Fixed: `type()` parentheses | Yes |
+| 3a | Methods (unavoidable, could use PRIMM) | Methods could use Predict phase | ~~return~~ was in L2, ~~len~~ now in L2 | Yes |
+| 3b | String indexing (crash course) | Could use PRIMM for indexing | IndexError contextual (formal in L5) | Yes |
 | 4 | Recursion before iteration | None | None | Yes |
 | 5 | String slicing, `len()` | None | None | Yes |
 | 6a | f-strings, `enumerate()` | None | None | Yes |
